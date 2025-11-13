@@ -28,3 +28,20 @@
 #### 3. 실시간으로 체크할 수 있는 UI가 빈약함
 
 #### 4. 음원 리스트를 제공하지 않았었음
+
+
+## 개발 기록
+
+### UserControl이 아닌 Page 사용
+- 본 프로그램은 컨텐츠 별로 화면 일부가 아닌 전체를 전환할 것이기 때문에 Page로 각 화면을 구성.
+
+1. 메인뷰(윈도우)에 프레임 놓기
+```C#
+    // MainView.xaml        
+    <Frame x:Name="MainFrame" 
+           NavigationUIVisibility="Hidden"
+           Content="{Binding CurrentView}"/> 
+```
+
+2. 홈뷰(페이지)를 따로 만들어서 프레임 위에 얹는 방식
+

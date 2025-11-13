@@ -9,20 +9,9 @@
         ResizeMode="CanMinimize"
         >
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="4*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1.5*"/>
-        </Grid.RowDefinitions>
-        <Button Grid.Row="1" Content="음감 테스트" Margin="50 10 50 10"
-                Command="{Binding ShowGameCommand}"/>
-        <Button Grid.Row="2" Content="음감 랭킹" Margin="50 10 50 10"/>
-        <Button Grid.Row="3" Content="연주하기" Margin="50 10 50 10"/>
-        <Button Grid.Row="4" Content="음원 만들기" Margin="50 10 50 10"/>
-        <Button Grid.Row="5" Content="음원 재생하기" Margin="50 10 50 10"/>
+        <!-- 화면 전환 데이터 바인딩 -->
+        <Frame x:Name="MainFrame"
+               NavigationUIVisibility="Hidden"
+               Content="{Binding CurrentView}"/>
     </Grid>
 </Window>
