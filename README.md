@@ -15,7 +15,7 @@
 - 음 연주 (옥타브, 음 길이 구현)
 - 음 연주 녹음 (파일시스템)
 
-### 개선 방법 아이디어 기록
+## 개선 방법 아이디어 기록
 
 #### 일단 게임과 랭킹은 개선 할 게 없다. 그대로 간다.
 
@@ -52,3 +52,11 @@
 - 대충 알아 보니, 전반적인 성능 개선은 물론, AI를 활용해 개발을 도와주는 기능이 추가됐다고 한다.
 
 - 어쨌든 지금부턴 2026 버전으로 프로젝트를 진행하며 신버전의 기능을 느껴 보도록 하자.
+
+### 버튼 이름별로 다른 역할을 다루고 싶을 때
+```C#
+    // GameView.xaml
+    command="{Binding 커맨드함수}"
+    commandParameter="{Binding Content, RelativeSource={RelativeSource Self}}" 
+```
+- 속성 자체의 값을 바인딩할 때, RelativeSource={RelativeSource Self}
